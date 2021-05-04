@@ -1,0 +1,36 @@
+Find the problem description at: https://toph.co/p/ishtiaque-and-the-rabbit
+
+This is a simple exercise for implementing the "Bigmod" idea. This can have two solution patterns, I think.
+
+1.
+If we study the problem, we can say, the answer solution is:
+
+a+ a*r + a*r*r + a*r*r*r + .....+ a*r^(n-1)  [total n terms]
+
+So, we can take two variables for i) i-th term, ii) sum to the i-th term.
+
+1st term (i=1) = a
+Sum to 1st term = a
+
+Then, for i=2 to i=n , we can form a loop within which we calculate the i-th term, then sum that up to previous sum. Since, the answers can be really big, we use modulo operator
+in every operation. 
+We have to use 1000003 for modulo operation as instructed in the question.
+
+
+So, the loop looks like this:
+
+term = a;
+ans = a;
+for(ll i=2;i<=n;i++){
+ term = (term*r)%m;
+ ans =  (ans+term)%m;
+}
+
+printf("%lld",ans);
+  
+
+2. The rule of geometric progression could be applied for this:  
+As this is a geometric progression, sum to the n-th term Sn = [a(r^n - 1)]/(r-1) , where a is the first term , r is the ratio.
+So, for our problem we could use this formula.
+We have to use modulo operator for both numerator and denominator, there might be some issues with using mod with a denominator. If someone has clear idea about how to use
+modular operation with denominator, they can go ahead with this technique.
