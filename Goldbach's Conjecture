@@ -1,0 +1,9 @@
+Goldbach's Conjecture:
+Every even integer n, n>2, is the sum of two primes. It has been verified by computer for all positive even integers up to 1.6*10^18. The conjecture is believed to be true by most 
+mathematicians.
+
+[Reference: https://sites.google.com/site/t062000/dm16  Lecture 19]
+
+Related problems:
+https://lightoj.com/problem/goldbach-s-conjecture
+
