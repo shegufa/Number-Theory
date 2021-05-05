@@ -4,7 +4,7 @@ First, create a sieve of Eratosthenes for n=10^7 which will tell us whether a nu
 prime[]) from this.
 Second, just check for any input n, for the prime numbers which are less than or equal to n/2, whether n minus that_prime_number is also a prime or not, if it's a prime, count
 that, else ignore.
-This loop looks like this:
+This loop looks like this: (prime[] holds the prime numbers serially, num[i] tells whether a number i is a prime or not, both arrays are created using sieve of Eratosthenes)
 
     int c=0,i;
 
