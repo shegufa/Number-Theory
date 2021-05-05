@@ -1,0 +1,16 @@
+Problem link: https://lightoj.com/problem/goldbach-s-conjecture
+Idea for solution:
+First, create a sieve of Eratosthenes for n=10^7 which will tell us whether a number(within 10^7) is prime or not, also create an array of primes (say the name of this array is 
+prime[]) from this.
+Second, just check for any input n, for the prime numbers which are less than or equal to n/2, whether n minus that_prime_number is also a prime or not, if it's a prime, count
+that, else ignore.
+This loop looks like this:
+
+    int c=0,i;
+
+    for(i=1;prime[i]<=n/2;i++)
+    {
+        if(num[n-prime[i]]==0) c++;
+    }
+   
+ c is the answer.
