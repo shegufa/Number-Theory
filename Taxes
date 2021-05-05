@@ -45,4 +45,4 @@ The code for this part looks like this: [say, isPrime(n) is a function which ret
 
 ans is the answer.
 
-The full code for this problem can be found at this repository in a cpp file with the same name.
+The full code for this problem can be found at this repository in a cpp file with the name "Taxes using Goldbach's Conjecture".
