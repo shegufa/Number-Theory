@@ -1,0 +1,4 @@
+Problem Link: https://www.codechef.com/problems/WAMU
+This is nothing but a very basic problem for using the most basic modular formula which is (a*b)%m = ((a%m)*(b%m))%m
+My solution is in the same repository with the name "Parhi And Multiplication.cpp"
+Thank you.
