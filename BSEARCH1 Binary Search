@@ -1,0 +1,21 @@
+Problem Link: https://www.spoj.com/problems/BSEARCH1/en/
+
+This can be solved very easily with few basic STL functions.
+
+For learning binary_search STL function, you can visit https://www.geeksforgeeks.org/binary-search-functions-in-c-stl-binary_search-lower_bound-and-upper_bound/
+
+My one solution for the problem is uploaded in the same repository with the name "BSEARCH1 Binary Search.cpp"
+
+In another solution I did not use any STL function. That solution is also in this repository with the name "BSEARCH1 Binary Search without STL.cpp"
+
+
+**
+If you use "cin, cout", it might cause few problems.
+
+In this problem, using basic "scanf, printf" will be enough.  I prefer using scanf, printf everywhere. 
+
+Thank you.
+
+
+
+
