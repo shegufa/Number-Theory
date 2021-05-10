@@ -1,0 +1,3 @@
+Problem Link: https://www.spoj.com/problems/TDKPRIME/en/
+It's just a simple use of "Sieve of Eratosthenes" 
+Solution is uploaded in the same repository as a cpp file with the same name.
