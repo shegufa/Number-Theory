@@ -13,9 +13,9 @@ using namespace std;
 #define newline printf("\n")
 #define print(n) printf("%I64d",n)
 
-ll BigMod(ll a, ll b, ll m)
+int BigMod(int a, int b, int m)
 {
-    ll x;
+    int x;
     if(b==0) return 1%m;
     x = BigMod(a,b/2,m);
     x = (x*x)%m;
@@ -25,10 +25,10 @@ ll BigMod(ll a, ll b, ll m)
 int main()
 {
 
-    ll a,b,m;
-    while(sc(a),sc(b),sc(m))
+    int a,b,m;
+    while(cin>>a>>b>>m)
     {
-        print(BigMod(a,b,m)); newline;
+        printf("%d\n",BigMod(a,b,m));
     }
 
     return 0;
