@@ -3,3 +3,33 @@ Problem Link: https://www.spoj.com/problems/NFACTOR/en/
 We used prime factorization with a bit of dynamic programming to solve the problem.
 
 Solution: https://github.com/shegufa/Number-Theory/blob/main/N-Factorful.cpp
+
+
+Concept for the solution:
+
+This is just implementation of Prime Factors with the idea of dynamic programming. You can read the "Prime Factors" file in the same repository
+[ https://github.com/shegufa/Number-Theory/blob/main/Prime%20Factors ]
+
+As, our constrains are T>10000, 1<=a,b<=10^6 , 0<=n<=10, we will get TLE, if we check for every test case, for every number from a to b whether it is n factorful or not.
+
+So, we have to prepare a two-dimensional array PFs[11][10^6] beforehand which will store at PFs[j][i] , how many numbers are j factorful from 1 to i. Then for this problem,
+when we are asked to say how many numbers are n-factorful within [a,b], we can just say PFs[n][b] - PFs[n][a-1]. 
+
+For this, for i from 1 to 10^6, we calculate primeFactors(i). If it's,say, h-factorful, we increase PFs[h][i-1] by 1 and store it in PFs[h][i] as PFs[h][i-1] holds the number of h-factorful numbers from 1 to i-1.  And we keep the other PFs[j][i] from 0 to 11 except h, the previous value, i.e. PFs[j][i-1]. This h stays between 0 to 10. Highest number of prime factors of a number within the range 1 to 10^6 is 7. I checked it with another program by printing the max value of h. 
+
+So, the basic code for this portion can be like this:
+
+for(i=2;i<=1000000;i++){
+        h = primeFactor(i);
+
+        PFs[h][i] = PFs[h][i-1] + 1;
+        for(j=0;j<=10;j++){
+            if(j==h) continue;
+            PFs[j][i] = PFs[j][i-1];
+        }
+    }
+    
+We handle the 0-th column and 1st column separate from the loop. 0-th column doesn't mean anything, it holds 0 for each row. It should hold 0, else, it might hold garbage value which will cause WA for my code for a=1 and we have to access PFs[n][1-1] for the result. We could handle it differently by checking with an if condition which would check if a==1,ans = PFs[n][b].
+
+That's about it. Thank you. 
+
