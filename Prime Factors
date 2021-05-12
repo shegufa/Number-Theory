@@ -33,4 +33,8 @@ So, this function, though it iterates over odd numbers, the inner if(n%i==0) is 
 Implementation and solution of the problem can be found in same repository with the same name but as a cpp file.  
 
 
+** A problem with the implementation of Prime Factors is "N-factorful"[https://www.spoj.com/problems/NFACTOR/en/] Give it a try.
+
+The problem is discussed in this same repository. (https://github.com/shegufa/Number-Theory/blob/main/N-Factorful). 
+
 
