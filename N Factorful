@@ -1,0 +1,5 @@
+Problem Link: https://www.spoj.com/problems/NFACTOR/en/
+
+We used prime factorization with a bit of dynamic programming to solve the problem.
+
+Solution: https://github.com/shegufa/Number-Theory/blob/main/N-Factorful.cpp
