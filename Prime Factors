@@ -1,0 +1,36 @@
+Problem Link : https://www.spoj.com/problems/PFACT/en/
+
+It is a basic problem of finding prime factors of a number.
+There is no input of the problem. We just have to output the prime factors of numbers from 2 to 10^5 .
+
+
+For each number we call a function which returns its distinct prime factors.
+For the function, we first divide n by 2 as long as we can and store the result to n, i.e. update n. We do division by 2 differntly so that later we can check for odd numbers only. If the number was divisible by 2, then 2 is a prime factor of n. 
+Then starting from 3, by increment of 2, to square root of n, we check for numbers which divides n, we divide n as long as it can be divided by that prime number. Then we add that number to its prime factors.
+The code can look like this:
+```
+if(n%2==0){
+        while(n%2==0) n/=2;
+        PF[k++]=2;
+    }
+
+    for(i=3;i*i<=n;i+=2)
+    {
+        if(n%i==0){
+            while(n%i==0) n/=i;
+            PF[k++] = i;
+        }
+    }
+ ```
+
+Now,
+One might wonder, why are we checking all the odd numbers, all the odd numbers which divide n are not prime! Well, if we look closely, we will understand, it will be only the prime factors which will satisfy the condition .
+
+Every number can be represented as a multiplication of primes which are obviously lower than that. So, if a prime doesn't divide the number, its multiples can not divide that number. So, it has to be the next prime which might divide the number. If that prime does not divide the number too, then all the number till next prime cannot divide n as they must be multiples of those primes. And if a prime is found which divides n, we keep dividing n as long as that prime divides n. So, if we keep dividing a number by 7 as long as possible, the resultant number cannot have 21 or 35 as its factor anymore. It cannot have 9 as factor anymore, as it was either divided by 3 as long as possible, hence 9 is out; or it was not divisible by 3, so it cannot be divisible by 9 of course. This way, the loop will find the primes only. 
+
+So, this function, though it iterates over odd numbers, the inner if(n%i==0) is only satisfied by primes.
+
+Implementation and solution of the problem can be found in same repository with the same name but as a cpp file.  
+
+
+
