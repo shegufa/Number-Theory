@@ -2,7 +2,7 @@
 
 Brute force technique would be just to create a for loop and check which numbers less than n, divides n. But, if the n is big enough or there are a lot of test cases, we obviously cannot follow Brute force technique.
 
-* Firstly, there is a very basic rule for counting number of divisors in a non brute force way. We use the idea of prime factorization here.
+* Firstly, there is a very basic rule for counting number of divisors in a non brute force way. We use the idea of prime factorization here.[Idea for finding prime factors: https://github.com/shegufa/Number-Theory/blob/main/Prime%20Factors]
 If a number can be expressed in its prime factorized form like this:
 n = p<sub>1</sub><sup>a<sub>1</sub></sup> * p<sub>2</sub><sup>a<sub>2</sub></sup> * p<sub>3</sub><sup>a<sub>3</sub></sup> * .....
 its number of divisors would be (a<sub>1</sub>+1) * (a<sub>2</sub>+1) * (a<sub>3</sub>+1) * ....
